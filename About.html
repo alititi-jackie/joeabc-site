@@ -1,180 +1,151 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>JoeABC.com</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- 使用简洁现代的 Inter 字体，配合圆角卡片风格，明亮科技风 -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;500;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="关于 JoeABC.com - 帮助华人轻松学英语，从每天一部视频开始。">
+  <title>关于 Joe - JoeABC.com</title>
   <style>
-    :root {
-      --primary: #2563eb;
-      --primary-dark: #1e40af;
-      --accent: #22d3ee;
-      --bg: #f5f7fa;
-      --card-bg: #fff;
-      --text-main: #222;
-      --muted: #8ca0b3;
-      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-    }
     body {
-      font-family: 'Inter', 'Microsoft YaHei', Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
       margin: 0;
-      min-height: 100vh;
-      letter-spacing: 0.01em;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f6f8fb;
+      color: #333;
     }
-    .banner {
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      color: #fff;
-      padding: 3em 1em 2em 1em;
-      text-align: center;
-      box-shadow: var(--shadow);
-      border-bottom-left-radius: 32px;
-      border-bottom-right-radius: 32px;
-      position: relative;
-    }
-    .logo {
-      font-family: 'Inter', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 2.6em;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.2em;
-      text-shadow: 0 3px 24px rgba(34,211,238,0.08), 0 1px 0 var(--primary-dark);
-    }
-    .desc {
-      font-size: 1.15em;
-      margin: 1.6em auto 0.5em;
-      max-width: 520px;
-      line-height: 2;
-      color: #e0f2fe;
-      font-weight: 500;
-      text-shadow: 0 1px 4px #1e293b22;
-    }
-    .nav-section {
-      max-width: 600px;
-      margin: -2.5em auto 2.5em;
-      z-index: 2;
-      position: relative;
-      background: var(--card-bg);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 2.3em 1.2em 1.4em 1.2em;
-      border-top: 8px solid var(--primary);
-      border-bottom: 1px solid #e0e7ef;
-      transition: box-shadow 0.18s;
-    }
-    .nav-section:hover {
-      box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.13);
-    }
-    .section-title {
-      font-size: 1.22em;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--primary-dark);
-      margin-bottom: 2em;
-      font-family: 'Inter', Arial, sans-serif;
-    }
-    .link-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .link-list li {
-      margin: 1.2em 0;
-      font-size: 1.13em;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      transition: transform 0.18s;
-      border-radius: 12px;
-      padding: 0.7em 1em;
-      background: linear-gradient(90deg, #f1f5f9 80%, #e0f2fe 100%);
-      box-shadow: 0 1px 6px 0 rgba(37, 99, 235, 0.04);
-    }
-    .link-list li:hover {
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 3px 18px 0 rgba(34,211,238,0.14);
-      background: linear-gradient(90deg, #e0f2fe 80%, #f1f5f9 100%);
-    }
-    .site-link {
-      color: var(--primary-dark);
-      font-weight: 700;
+
+    .home-button {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      background-color: white;
+      color: #0078d4;
+      border: 2px solid #0078d4;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.95rem;
       text-decoration: none;
-      font-size: 1.05em;
-      margin-right: 0.9em;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-      padding-bottom: 1px;
-      border-bottom: 2px solid var(--accent);
+      z-index: 200;
+      transition: background-color 0.3s, color 0.3s;
     }
-    .site-link:hover {
-      color: var(--primary);
-      border-color: var(--primary);
+
+    .home-button:hover {
+      background-color: #0078d4;
+      color: white;
     }
-    .link-desc {
-      color: var(--muted);
-      font-size: 0.96em;
-      font-weight: 400;
-      margin-left: 0.2em;
-    }
-    .footer {
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      padding: 1.5rem;
       text-align: center;
-      color: #a0aec0;
-      font-size: 1em;
-      margin: 3.5em 0 1.2em;
-      letter-spacing: 1px;
-      z-index: 1;
-      position: relative;
-      font-family: 'Inter', 'Microsoft YaHei', Arial, sans-serif;
+      padding-top: 4rem;
     }
-    @media (max-width: 700px) {
-      .nav-section { padding: 1.2em 0.4em 0.9em 0.4em; }
-      .banner { padding: 2em 0.2em 1.2em 0.2em; }
-      .logo { font-size: 1.35em; }
-      .desc { font-size: 0.98em; }
-      .section-title { font-size: 1em; }
-      .footer { font-size: 0.96em; }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #0078d4;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 100;
+      font-size: 1.2rem;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s;
+    }
+
+    #backToTop:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <div class="banner">
-    <div class="logo">JoeABC.COM</div>
-    <div class="desc">
-    嗨，我是Joe！<br>
-    从零开始探索网站搭建，现在我正借助AI，将想法变为现实。从初步尝试到不断优化，<br>我的网站们见证着每一步的成长。<br>
-     <br>
-    </div>
-  </div>
-  <div class="nav-section">
-    <div class="section-title">欢迎探索我的AI驱动作品</div>
-    <ul class="link-list">
-      <li>
-        <a href="https://jozl.com/domains" class="site-link" target="_blank">Domain Showcase Page</a>
-        <span class="link-desc"> · </span>
-      </li>
-      <li>
-        <a href="https://tapbi.com" class="site-link" target="_blank">Tapbi.com</a>
-        <span class="link-desc">TapBi导航 · 轻点 · 速达世界</span>
-      </li>
-      <li>
-        <a href="https://joeabc.com" class="site-link" target="_blank">Joeabc.com</a>
-        <span class="link-desc">英语学习专区：从ABC到流利英语，每一步都踏踏实实</span>
-      </li>
-      <li>
-        <a href="https://jozl.com" class="site-link" target="_blank">Jozl.com</a>
-        <span class="link-desc">Joy Of Zero Limits，无限喜悦，无界人生</span>
-      </li>
-      <li>
-        <a href="https://alititi.com" class="site-link" target="_blank">alititi.com</a>
-        <span class="link-desc">最喜欢的玩具Alititi</span>
-      </li>
-    </ul>
-  </div>
-  <div class="footer">
-    © 2025 Joeabc.com | 由Joe维护 | 邮箱: 323748@gmail.com
-  </div>
+
+<a href="/" class="home-button">← 返回首页</a>
+
+<header>
+  <h1>关于 Joe</h1>
+  <p>JoeABC.com 的创始人 & 初衷</p>
+</header>
+
+<div class="container">
+  <h2>👋 你好，我是 Joe</h2>
+  <p>欢迎来到 JoeABC.com，这是一个为中文母语者量身打造的英语学习导航网站。</p>
+
+  <p>我是一位热爱英语学习的普通华人，也曾为单词、语法和口语发音感到迷茫。后来我发现：每天花一点时间听听视频、看看例句、和 AI 聊聊天，比起死记硬背效果更好、更有趣。</p>
+
+  <p>于是我创建了这个平台，整理我自己亲测有效的学习资源，并用简单中文说明，希望帮助更多人避开弯路、找到适合自己的学习方式。</p>
+
+  <h2>✨ 我希望 JoeABC 是这样一个网站：</h2>
+  <ul>
+    <li>🎬 每天一部短视频，轻松提升听力和语感</li>
+    <li>🎧 听歌学英语，学会模仿和表达</li>
+    <li>📚 实用工具导航，省去搜索时间</li>
+    <li>🤖 AI 对话助教，随时帮你练口语和写作</li>
+  </ul>
+
+  <h2>📬 联系方式</h2>
+  <p>如果你有任何建议、资源推荐或合作想法，欢迎发邮件给我：</p>
+  <p><a href="mailto:info@jozl.com">info@jozl.com</a></p>
+</div>
+
+<!-- 回到顶部按钮 -->
+<button id="backToTop" title="回到顶部">↑</button>
+
+<footer>
+  © 2025 JOEABC.COM | 欢迎分享给朋友一起学英语！
+</footer>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 </body>
 </html>
