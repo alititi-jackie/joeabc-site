@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JoeABC.com 英语学习视频推荐页面 - 每天一部轻松提升听说力！">
+  <title>英语学习视频推荐 - JoeABC.com</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f6f8fb;
+      color: #333;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      background-color: white;
+      color: #0078d4;
+      border: 2px solid #0078d4;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      z-index: 200;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #0078d4;
+      color: white;
+    }
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      background-color: #f0f0f0;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      margin: 0 0.8rem;
+      color: #0078d4;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #0078d4;
+      margin-bottom: 1rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    /* 回到顶部按钮样式 */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 100;
+      font-size: 1.2rem;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s;
+    }
+
+    #backToTop:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<a href="/" class="home-button">← 返回首页</a>
+
+<header>
+  <h1>英语学习视频推荐</h1>
+  <p>精选内容，帮你提升口语和听力</p>
+</header>
+
+<nav>
+  <a href="/b">每天一首英文歌</a>
+  <a href="/about">关于 Joe</a>
+</nav>
+
+<div class="container">
+  <h2>🎥 今日推荐视频</h2>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/1frSB7BW7Kg" title="英文口语练习" allowfullscreen></iframe>
+  </div>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/1s4aME59LiY" title="英语听力练习" allowfullscreen></iframe>
+  </div>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/ZRTv2BHdVGM" title="每日一句英文" allowfullscreen></iframe>
+  </div>
+
+   <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/lGOhtXgffeg" title="每日一句英文" allowfullscreen></iframe>
+  </div>
+
+</div>
+
+<!-- 回到顶部按钮 -->
+<button id="backToTop" title="回到顶部">↑</button>
+
+ <footer>
+    © 2025 JoeABC.com | 联系邮箱：<a href="mailto:info@jozl.com">info@jozl.com</a><br>
+    <a class="more-link" href="https://joeabc.com/OurWebsite" target="_blank">了解 Joe 的更多 →</a>
+  </footer>
+
+<!-- 回到顶部脚本 -->
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
+
