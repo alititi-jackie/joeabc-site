@@ -3,16 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JoeABC.com 英语晨读视频页面 - 每天一部轻松提升听说力！">
-  <title>英语晨读视频页面 - JoeABC.com</title>
+  <meta name="theme-color" content="#0078d4">
+
+  <!-- SEO -->
+  <title>英语晨读 · 每日英语晨读视频｜JoeABC 华人英语学习</title>
+  <meta name="description" content="JoeABC 英语晨读页面：每天一段精选四级到商务级别的英语晨读与听力训练，适合华人学习者稳步提升口语与听力。包含视频、练习与学习工具推荐。">
+  <meta name="keywords" content="英语晨读, 每日英语, 英语听力, 英语口语, 华人学英语, 英语学习视频, JoeABC">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://joeabc.com/a.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://joeabc.com/a.html">
+  <link rel="alternate" hreflang="en-US" href="https://joeabc.com/en/a.html">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="英语晨读 · JoeABC — 每日英语晨读视频" />
+  <meta property="og:description" content="JoeABC 提供每日英语晨读视频与听力练习，适合华人提升听说读写能力。查看精选晨读合集与相关学习资源。" />
+  <meta property="og:image" content="https://joeabc.com/logo.png" />
+  <meta property="og:url" content="https://joeabc.com/a.html" />
+  <meta property="og:type" content="video.other" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="英语晨读 · JoeABC" />
+  <meta name="twitter:description" content="每日英语晨读视频与听力练习，帮助华人稳步提升英语能力。关注 JoeABC 获取每日更新。" />
+  <meta name="twitter:image" content="https://joeabc.com/logo.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://joeabc.com/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://joeabc.com/apple-touch-icon.png">
+
+  <!-- Structured data: Organization + WebPage (includes SearchAction) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://joeabc.com/#org",
+        "name": "JoeABC",
+        "url": "https://joeabc.com/",
+        "logo": "https://joeabc.com/logo.png",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "323748@gmail.com",
+          "contactType": "customer support",
+          "availableLanguage": ["Chinese","English"]
+        }]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://joeabc.com/a.html#webpage",
+        "url": "https://joeabc.com/a.html",
+        "name": "英语晨读 · JoeABC",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@id": "https://joeabc.com/#org" },
+        "description": "每日精选英语晨读与听力练习视频，适合华人学习者稳步提升听说能力。"
+      },
+      {
+        "@type": "SearchAction",
+        "target": "https://www.google.com/search?q=site:joeabc.com+{search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    ]
+  }
+  </script>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #f6f8fb;
-      color: #333;
+      color: #222;
+      line-height: 1.6;
     }
-
     .home-button {
       position: fixed;
       top: 16px;
@@ -27,12 +90,7 @@
       z-index: 200;
       transition: background-color 0.3s, color 0.3s;
     }
-
-    .home-button:hover {
-      background-color: #0078d4;
-      color: white;
-    }
-
+    .home-button:hover { background-color: #0078d4; color: white; }
     header {
       background-color: #0078d4;
       color: white;
@@ -40,151 +98,81 @@
       text-align: center;
       padding-top: 4rem;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    nav {
-      background-color: #f0f0f0;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      margin: 0 0.8rem;
-      color: #0078d4;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      color: #0078d4;
-      margin-bottom: 1rem;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      margin-top: 3rem;
-    }
-
-    /* 回到顶部按钮样式 */
-    #backToTop {
-      display: none;
-      position: fixed;
-      bottom: 40px;
-      right: 30px;
-      z-index: 100;
-      font-size: 1.2rem;
-      background-color: #0078d4;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: opacity 0.3s;
-    }
-
-    #backToTop:hover {
-      background-color: #005fa3;
-    }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    header p { margin: 6px 0 0; font-size: 1rem; opacity: 0.95; }
+    nav { background-color: #f0f0f0; padding: 0.5rem 1rem; text-align: center; font-size: 0.95rem; }
+    nav a { margin: 0 0.8rem; color: #0078d4; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: auto; padding: 2rem 1rem; }
+    h2 { font-size: 1.4rem; color: #0078d4; margin-bottom: 1rem; }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; background: #000; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    footer { background-color: #fff; text-align: center; padding: 1rem; font-size: 0.95rem; border-top: 1px solid #eef2f6; margin-top: 2rem; color: #555; }
+    #backToTop { display:none; position:fixed; bottom:40px; right:30px; z-index:100; font-size:1.1rem; background-color:#0078d4; color:white; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.18); }
+    #backToTop:hover { background-color:#005fa3; transform:translateY(-2px); }
+    @media (max-width:600px) { header h1{font-size:1.4rem} .container{padding:1rem} }
   </style>
 </head>
 <body>
+  <a class="home-button" href="https://joeabc.com/" aria-label="返回 JoeABC 首页">← 返回首页</a>
 
-<a href="/" class="home-button">← 返回首页</a>
+  <header>
+    <h1>英语晨读 · JoeABC</h1>
+    <p>精选短时英语晨读与听力练习，适合每天打卡学习</p>
+  </header>
 
-<header>
-  <h1>英语晨读视频页面</h1>
-  <p>精选内容，帮你提升口语和听力</p>
-</header>
+  <nav aria-label="主导航">
+    <a href="https://joeabc.com/" aria-label="JoeABC 首页">首页</a>
+    <a href="https://joeabc.com/b" aria-label="每天一首英文歌">每天一首英文歌</a>
+    <a href="https://joeabc.com/c" aria-label="视频推荐">视频推荐</a>
+    <a href="https://joeabc.com/About" aria-label="关于 Joe">关于</a>
+  </nav>
 
-<nav>
-  <a href="/b">每天一首英文歌</a>
-  <a href="/c">英语学习视频推荐</a>
-  <a href="/About">关于 Joe</a>
-</nav>
+  <main class="container" role="main" aria-labelledby="page-title">
+    <h2 id="page-title" class="sr-only">英语晨读</h2>
 
-<div class="container">
-  <h2>🎥 英语晨读</h2>
+    <section aria-labelledby="morning1">
+      <h2 id="morning1">🎥 英语晨读（精选）</h2>
+      <div class="video-container" aria-hidden="false">
+        <iframe src="https://www.youtube.com/embed/a_kNVwFo1Nw" title="英语晨读1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/a_kNVwFo1Nw" title="英语晨读1" allowfullscreen></iframe>
-  </div>
+      <div class="video-container" aria-hidden="false">
+        <iframe src="https://www.youtube.com/embed/ktP5w2DwkLs" title="英语晨读2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/ktP5w2DwkLs" title="英语晨读2" allowfullscreen></iframe>
-  </div>
+      <div class="video-container" aria-hidden="false">
+        <iframe src="https://www.youtube.com/embed/A97cry4KWNk" title="英语晨读3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/A97cry4KWNk" title="英语晨读3" allowfullscreen></iframe>
-  </div>
+      <div class="video-container" aria-hidden="false">
+        <iframe src="https://www.youtube.com/embed/xmtCVnuR5x4" title="英语晨读4" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
+      <p>提示：建议每天坚持 5–15 分钟晨读与跟读，逐步提升语感与发音。</p>
+      <p><strong>更多晨读：</strong> <a href="https://joeabc.com/a" aria-label="更多晨读视频">查看完整晨读合集</a></p>
+    </section>
+  </main>
 
-   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/xmtCVnuR5x4" title="英语晨读4" allowfullscreen></iframe>
-  </div>
-</div>
+  <button id="backToTop" title="回到顶部" aria-label="回到页面顶部">↑</button>
 
-<!-- 回到顶部按钮 -->
-<button id="backToTop" title="回到顶部">↑</button>
-
- <footer>
+  <footer>
     © 2025 JoeABC.com | 联系邮箱：<a href="mailto:323748@gmail.com">323748@gmail.com</a><br>
-    <a class="more-link" href="https://openaa.com/About" target="_blank">了解 OpenAA更多 →</a>
+    <a class="more-link" href="https://openaa.com/About.html" target="_blank" rel="noopener noreferrer">了解 OpenAA 更多 →</a>
   </footer>
 
-<!-- 回到顶部脚本 -->
-<script>
-  const backToTopBtn = document.getElementById("backToTop");
+  <script>
+    // 回到顶部逻辑与无障碍增强
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener('scroll', function () {
+      backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  };
-
-  backToTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
+    // Accessibility: ensure focus outline visible after keyboard navigation
+    window.addEventListener('keydown', function(e){
+      if(e.key === 'Tab') document.body.classList.add('show-focus');
+    });
+  </script>
 </body>
 </html>
-
